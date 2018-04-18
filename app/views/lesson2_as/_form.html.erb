@@ -1,0 +1,37 @@
+<%= form_with(model: lesson2_a, local: true) do |form| %>
+  <% if lesson2_a.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lesson2_a.errors.count, "error") %> prohibited this lesson2_a from being saved:</h2>
+
+      <ul>
+      <% lesson2_a.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :string_test %>
+    <%= form.text_field :string_test, id: :lesson2_a_string_test %>
+  </div>
+
+  <div class="field">
+    <%= form.label :datetime_test %>
+    <%= form.datetime_select :datetime_test, id: :lesson2_a_datetime_test %>
+  </div>
+
+  <div class="field">
+    <%= form.label :integer_test %>
+    <%= form.number_field :integer_test, id: :lesson2_a_integer_test %>
+  </div>
+
+  <div class="field">
+    <%= form.label :boolean_test %>
+    <%= form.check_box :boolean_test, id: :lesson2_a_boolean_test %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

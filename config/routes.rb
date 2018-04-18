@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :lesson2_as
   if Figaro.env.rails_admin_path?
     mount RailsAdmin::Engine => "/#{Figaro.env.rails_admin_path}", as: 'rails_admin'
   end

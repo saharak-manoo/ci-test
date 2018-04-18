@@ -58,6 +58,7 @@ group :development, :test do
   gem 'poltergeist'
   gem 'rspec-retry'
   gem 'database_cleaner'
+  gem 'rails-controller-testing'
 end
 
 group :development do

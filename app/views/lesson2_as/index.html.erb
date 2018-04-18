@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lesson2 As</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>String test</th>
+      <th>Datetime test</th>
+      <th>Integer test</th>
+      <th>Boolean test</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lesson2_as.each do |lesson2_a| %>
+      <tr>
+        <td><%= lesson2_a.string_test %></td>
+        <td><%= lesson2_a.datetime_test %></td>
+        <td><%= lesson2_a.integer_test %></td>
+        <td><%= lesson2_a.boolean_test %></td>
+        <td><%= link_to 'Show', lesson2_a %></td>
+        <td><%= link_to 'Edit', edit_lesson2_a_path(lesson2_a) %></td>
+        <td><%= link_to 'Destroy', lesson2_a, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lesson2 A', new_lesson2_a_path %>

@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180116072855) do
+ActiveRecord::Schema.define(version: 20180418075157) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "lesson1_bs", force: :cascade do |t|
+    t.string "string_test"
+    t.datetime "datetime_test"
+    t.integer "integer_test"
+    t.boolean "boolean_test"
+  end
+
+  create_table "lesson1_cs", force: :cascade do |t|
+    t.string "string_test"
+    t.datetime "datetime_test"
+    t.integer "integer_test"
+    t.boolean "boolean_test"
+  end
+
+  create_table "lesson2_as", force: :cascade do |t|
+    t.string "string_test"
+    t.datetime "datetime_test"
+    t.integer "integer_test"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "boolean_test"
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string "name"
@@ -23,6 +46,13 @@ ActiveRecord::Schema.define(version: 20180116072855) do
     t.datetime "updated_at", null: false
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
     t.index ["resource_type", "resource_id"], name: "index_roles_on_resource_type_and_resource_id"
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.string "string_test"
+    t.datetime "datetime_test"
+    t.integer "integer_test"
+    t.boolean "boolean_test"
   end
 
   create_table "users", force: :cascade do |t|
